@@ -21,7 +21,7 @@ class Name{
         ///
         /// Armazena o nome informado caso seja valido
         ///
-        /// Lança exceção caso o nome nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso o nome nao esteja de acordo com as regras de formato
         ///
         /// @param valor nome
         ///
@@ -47,7 +47,7 @@ class Name{
 /// - Nome de dominio consiste em uma lista de termos separados por '.'
 /// - '.' nao pode aparecer em seguida ou no primeiro caracter de dominio
 /// - Nao ha ponto como primeiro ou ultimo caracter ou em sequencia.
-/// - Cada termo é composto por ate 63 caracteres
+/// - Cada termo ï¿½ composto por ate 63 caracteres
 /// - Caracter do termo pode ser letra A-Z, a-z e digitos 0-9
 /// - '-' pode ser utilizado caso nao seja o primeiro ou o ultimo caractere
 ///
@@ -62,7 +62,7 @@ class Email{
         ///
         /// Armazena o email informado caso seja valido
         ///
-        /// Lança exceção caso o email nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso o email nao esteja de acordo com as regras de formato
         ///
         /// @param value email
         ///
@@ -95,7 +95,7 @@ class Password{
         ///
         /// Armazena a senha informada caso seja valida
         ///
-        /// Lança exceção caso a senha nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso a senha nao esteja de acordo com as regras de formato
         ///
         /// @param valor senha
         ///
@@ -114,8 +114,8 @@ class Password{
 ///
 /// @brief Representacao de idioma
 ///
-/// - Idiomas disponiveis: Inglês, Chinês, Mandarim, Hindi, Espanhol, Francês, Árabe, Bengali, Russo, Português, Indonésio;
-/// - Desconsiderar acentuaçao dos idiomas.
+/// - Idiomas disponiveis: Inglï¿½s, Chinï¿½s, Mandarim, Hindi, Espanhol, Francï¿½s, ï¿½rabe, Bengali, Russo, Portuguï¿½s, Indonï¿½sio;
+/// - Desconsiderar acentuaï¿½ao dos idiomas.
 // Classe Language criado por Thiago Yuiti 202042702
 class Language{
     private:
@@ -126,7 +126,7 @@ class Language{
         ///
         /// Armazena o idioma informada caso seja valido.
         ///
-        /// Lança exceção caso o idioma nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso o idioma nao esteja de acordo com as regras de formato
         ///
         /// @param valor idioma
         ///
@@ -158,7 +158,7 @@ class Date{
         ///
         /// Armazena a data informada caso seja valida.
         ///
-        /// Lança exceção caso a data nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso a data nao esteja de acordo com as regras de formato
         ///
         /// @param valor data
         ///
@@ -178,7 +178,7 @@ class Date{
 /// @brief Representacao de descricao
 ///
 /// - Contem de 0 a 40 caracteres
-/// - Sem espaços ou pontos em sequencia
+/// - Sem espaï¿½os ou pontos em sequencia
 /// - Nao contem caracteres de pontuacao em sequencia
 // Classe Description criado por Thiago Yuiti 202042702
 
@@ -191,7 +191,7 @@ class Description{
         ///
         /// Armazena a descricao informada caso seja valida
         ///
-        /// Lança exceção caso a descricao nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso a descricao nao esteja de acordo com as regras de formato
         ///
         /// @param valor descricao
         ///
@@ -223,7 +223,7 @@ class Code{
         ///
         /// Armazena o codigo informado caso seja valido
         ///
-        /// Lança exceção caso o codigo nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso o codigo nao esteja de acordo com as regras de formato
         ///
         /// @param valor codigo
         ///
@@ -253,7 +253,7 @@ class City{
         ///
         /// Armazena a cidade informada caso seja valida.
         ///
-        /// Lança exceção caso a cidade nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso a cidade nao esteja de acordo com as regras de formato
         ///
         /// @param valor cidade
         ///
@@ -273,7 +273,7 @@ class City{
 ///
 /// @brief Representacao de pais
 ///
-/// - Paises disponiveis: Estados Unidos, Brasil, China, Coreia do Sul, Emirados, França, India, Japao, Malasia, Reino Unido, Tailandia, Turquia
+/// - Paises disponiveis: Estados Unidos, Brasil, China, Coreia do Sul, Emirados, Franï¿½a, India, Japao, Malasia, Reino Unido, Tailandia, Turquia
 /// - Desconsiderar Acentuacao
 ///
 // Classe Country criado por Thiago Yuiti 202042702
@@ -287,7 +287,7 @@ class Country{
         ///
         /// Armazena o pais informado caso seja valido.
         ///
-        /// Lança exceção caso o pais nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso o pais nao esteja de acordo com as regras de formato
         ///
         /// @param valor pais
         ///
@@ -318,7 +318,7 @@ class Note{
         ///
         /// Armazena a nota informada caso seja valida.
         ///
-        /// Lança exceção caso a nota nao esteja de acordo com as regras de formato
+        /// Lanï¿½a exceï¿½ï¿½o caso a nota nao esteja de acordo com as regras de formato
         ///
         /// @param valor nota
         ///
