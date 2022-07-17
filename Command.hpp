@@ -119,7 +119,7 @@ class Password{
 // Classe Language criado por Thiago Yuiti 202042702
 class Language{
     private:
-        static string language[11]; // vetor contendo linguagens validas
+        static string language[10]; // vetor contendo linguagens validas
         string value;
         void validate(string value);
     public:

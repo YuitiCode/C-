@@ -40,8 +40,6 @@ void Name::validate(string name)
         
     }
 
-
-
 }
 
 void Name::setValue(string value){
@@ -50,14 +48,40 @@ void Name::setValue(string value){
 
 }
 
-string City::Cities[19] = {"Antalya", "Bangkok", "Delhi", "Dubai", "Hong Kong", "Londres", "Macau", "Mumbai", "Paris", "Rio de Janeiro", "São Paulo", "Seul", "Istambul", "Kuala Lumpur", "Nova Iorque", "Osaka", "Phuket", "Shenzhen", "Tóquio"};
+string City::Cities[19] = {"Antalya", "Bangkok", "Delhi", "Dubai", "Hong Kong", "Londres", "Macau", "Mumbai", "Paris", "Rio de Janeiro", "Sao Paulo", "Seul", "Istambul", "Kuala Lumpur", "Nova Iorque", "Osaka", "Phuket", "Shenzhen", "Taquio"};
 
 void City::validate(string value){ //melhorar essa função se tiver mais tempo
-if (find(begin(value), end(value), Cities) == end(value))
-    throw invalid_argument("Cidade invalida! Verifique as disponiveis.");
+    if (find(begin(value), end(value), Cities) == end(value))
+        throw invalid_argument("Cidade invalida! Verifique as cidades disponíveis.");
 }
 
 void City::setValue(string value){
+    validate(value);
+    this->value = value;
+
+}
+
+string Country::countries[12] = {"Estados Unidos", "Brasil", "China", "Coreia do Sul", "Emirados", "França", "India", "Japao", "Malasia", "Reino Unido", "Tailandia", "Turquia"};
+
+void Country::validate(string value){ 
+    if (find(begin(value), end(value), countries) == end(value))
+        throw invalid_argument("País invalido! Verifique os países disponiveis.");
+}
+
+void Country::setValue(string value){
+    validate(value);
+    this->value = value;
+
+}
+
+string Language::language[10] = {"Ingles", "Chines Mandarim", "Hindi", "Espanhol", "Frances", "Arabe", "Bengali", "Russo", "Portugues", "Indonesio"};
+
+void Language::validate(string value){ 
+    if (find(begin(value), end(value), language) == end(value))
+        throw invalid_argument("País invalido! Verifique os países disponiveis.");
+}
+
+void Language::setValue(string value){
     validate(value);
     this->value = value;
 
