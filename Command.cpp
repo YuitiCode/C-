@@ -158,3 +158,40 @@ void Password::setValue(string value){
 }
 
 
+//fazer validação de email na aula amanha
+void Email::validate(string value){
+    int counter = 0;
+    int tamanho = 0;
+    char c;
+
+    if (value[0] == '@' || value[0] == '.'){
+        throw invalid_argument("Email não pode começar com @ ou ponto");
+    }
+
+    while (counter != 1){
+        for (char l : value){
+            tamanho += 1;
+            if (l == '@'){
+                counter += 1;
+            }
+
+            if(l == '.' && c == '.'){
+                throw invalid_argument("Não pode haver dois pontos em sequência");
+            }
+            
+            if(isalnum(l) != true && l != '-' && l != '_' && l != '.'){
+                throw invalid_argument("Email deve ser composto apenas por letra ou digito");
+            }
+
+            if (tamanho > 64){
+                throw invalid_argument("Email deve ter menos que 65 caracteres");
+            }
+
+        }
+    }
+
+    
+
+}
+
+
