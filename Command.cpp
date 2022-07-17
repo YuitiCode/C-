@@ -50,15 +50,18 @@ void Name::setValue(string value){
 
 }
 
-string City::Cities[19] = {"Hong Kong", "Bangkok", "Macau", "Singapura", //alterar valores dessa lista
- "Londres", "Paris", "Dubai", "Delhi", "Istambul", "Kuala","Lumpur",
-  "Nova Iorque", "Antalya", "Mumbai", "Shenzhen", "Phuket"};
+string City::Cities[19] = {"Antalya", "Bangkok", "Delhi", "Dubai", "Hong Kong", "Londres", "Macau", "Mumbai", "Paris", "Rio de Janeiro", "São Paulo", "Seul", "Istambul", "Kuala Lumpur", "Nova Iorque", "Osaka", "Phuket", "Shenzhen", "Tóquio"};
 
-void City::validate(string value){ //melhorar essa função
+void City::validate(string value){ //melhorar essa função se tiver mais tempo
 if (find(begin(value), end(value), Cities) == end(value))
     throw invalid_argument("Cidade invalida! Verifique as disponiveis.");
 }
 
+void City::setValue(string value){
+    validate(value);
+    this->value = value;
+
+}
 
 void Description::validate(string value){ 
     if(value.size() <= 0 || value.size() > 40){
@@ -77,6 +80,15 @@ void Description::validate(string value){
         }
         x = l;
     
+    }
+}
+
+void Description::setValue(string value){
+    validate(value);
+    this->value = value;
 
 }
+
+
+
 
