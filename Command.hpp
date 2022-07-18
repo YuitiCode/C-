@@ -69,14 +69,14 @@ class Email{
         /// @throw invalid_argument
         ///
 
-        void setValor(string valor);
+        void setValue(string valor);
 
         ///
         /// Retorna o email armazenado
         ///
         /// @return email
         ///
-        string getValor() const;
+        string getValue() const;
 
 };
 ///

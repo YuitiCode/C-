@@ -158,39 +158,67 @@ void Password::setValue(string value){
 }
 
 
-//fazer validação de email na aula amanha
+//verificar se a validação ta completa
 void Email::validate(string value){
     int counter = 0;
-    int tamanho = 0;
-    char c;
+    int tamanho1, tamanho2 = 0;
+    char c = ' ';
 
     if (value[0] == '@' || value[0] == '.'){
         throw invalid_argument("Email não pode começar com @ ou ponto");
     }
-
-    while (counter != 1){
-        for (char l : value){
-            tamanho += 1;
-            if (l == '@'){
-                counter += 1;
-            }
-
-            if(l == '.' && c == '.'){
-                throw invalid_argument("Não pode haver dois pontos em sequência");
-            }
-            
-            if(isalnum(l) != true && l != '-' && l != '_' && l != '.'){
-                throw invalid_argument("Email deve ser composto apenas por letra ou digito");
-            }
-
-            if (tamanho > 64){
-                throw invalid_argument("Email deve ter menos que 65 caracteres");
-            }
-
-        }
+    if (value[-1] == '-'){
+        throw invalid_argument("Hífen nao pode ser o ultimo caracter");
     }
 
     
+    for (char l : value){
+        tamanho1 += 1;
+        if(counter == 0){
+            if (l == '@'){
+            counter += 1;
+            }
+        
+        if (c == '.' && l == '-' && counter == 1){
+            throw invalid_argument("Hífen nao pode ser o primeiro caracter depois do ponto");
+        }
+
+        if (c == '-' && l == '.' && counter == 1){
+            throw invalid_argument("Hífen nao pode ser o ultimo caracter antes do ponto");
+        }
+        
+
+        if (l == '.' && c == '.'){
+            throw invalid_argument("Não pode haver dois pontos em sequência");
+        }
+        
+        if (isalnum(l) != true && l != '-')
+            if (counter == 1){
+                throw invalid_argument("Email deve ser composto apenas por letra, numero ou hifen");
+            }
+            else if(l != '_' && l != '.'){
+                throw invalid_argument("Email deve ser composto apenas por letra, numero, hifen, sublinhado ou ponto");
+        }
+
+        if (tamanho1 > 64 && counter == 0){
+            throw invalid_argument("Email deve ter menos que 65 caracteres");
+        }
+
+        if (tamanho1 > 63 && counter == 1){
+            throw invalid_argument("Email deve ter menos que 64 caracteres");
+        }
+
+        c = l;
+
+        }
+        
+    }
+    
+}
+
+void Email::setValue(string value){
+    validate(value);
+    this->value = value;
 
 }
 
