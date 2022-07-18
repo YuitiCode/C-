@@ -6,6 +6,8 @@
 #include <algorithm> //find
 // #include <cstring>
 #include "Command.hpp"
+// #include <bits/stdc++.h> se o codigo falhar no Luhn descomentar essa linha e a debaixo
+// using namespace std;
 
 string City::Cities[19] = {"Antalya", "Bangkok", "Delhi", "Dubai", "Hong Kong", "Londres", "Macau", "Mumbai", "Paris", "Rio de Janeiro", "Sao Paulo", "Seul", "Istambul", "Kuala Lumpur", "Nova Iorque", "Osaka", "Phuket", "Shenzhen", "Taquio"};
 
@@ -221,6 +223,7 @@ void Email::setValue(string value){
     this->value = value;
 
 }
+
 //olhar Luhn algorithm - Wikipedia e aplicar no ultimo caractere
 void Code::validate(string value){
     if (value.size() > 11){
@@ -232,9 +235,44 @@ void Code::validate(string value){
             throw invalid_argument("Os 9 primeiros valores devem ser digitos");
         }
     }
+    int number = value.length();
+    int nSum = 0;
+    int isSecond = false;
+
+    for (int i = number - 1; i >= 0; i--) {
+ 
+        int d = value[i] - '0';
+ 
+        if (isSecond == true)
+            d = d * 2;
+ 
+        // We add two digits to handle
+        // cases that make two digits after
+        // doubling
+        nSum += d / 10;
+        nSum += d % 10;
+ 
+        isSecond = !isSecond;
+    }
+    if(nSum % 10 != 0){
+        throw invalid_argument("Digito de verificação está errado");
+    }
+
 
 }
 
 void Code::setValue(string value){
     validate(value);
     this->value = value;
+
+}
+
+string Date::month[12] = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
+
+//vamos supor que o input é 12/Jan
+
+void Date::validate(string value){
+    
+    
+
+}

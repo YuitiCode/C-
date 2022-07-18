@@ -144,7 +144,7 @@ class Language{
 ///
 /// @brief Representacao de data
 ///
-/// - Formato DD-MES-AAAA;
+/// - Formato DD/MES;
 /// - DD de 1 a 31;
 /// - Mes - JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV, DEZ;
 // Classe Date criado por Thiago Yuiti 202042702
