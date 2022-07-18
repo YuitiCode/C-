@@ -221,5 +221,20 @@ void Email::setValue(string value){
     this->value = value;
 
 }
+//olhar Luhn algorithm - Wikipedia e aplicar no ultimo caractere
+void Code::validate(string value){
+    if (value.size() > 11){
+        throw invalid_argument("Código deve ter 11 caracteres");
+    }
 
+    for(int i = 0; value.size() - 1; i ++){
+        if(isdigit(value[i]) != true){
+            throw invalid_argument("Os 9 primeiros valores devem ser digitos");
+        }
+    }
 
+}
+
+void Code::setValue(string value){
+    validate(value);
+    this->value = value;
