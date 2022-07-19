@@ -2,7 +2,7 @@
 // #include <string.h>
 // #include <stdexcept>
 // #include <cctype>
-// #include <map>
+#include <map>
 #include <algorithm> //find
 // #include <cstring>
 #include "Command.hpp"
@@ -267,12 +267,28 @@ void Code::setValue(string value){
 
 }
 
-string Date::month[12] = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
-
-//vamos supor que o input é 12/Jan
-
 void Date::validate(string value){
-    
-    
+    map<string,int> months = {
+        {"Jan", 31},{"Fev", 28},{"Mar", 31},{"Abr", 30},{"Mai",31},{"Jun",30},{"Jul",31},{"Ago",31},{"Set",30},{"Out",31},{"Nov",30},{"Dez",31}
+    };
+
+    if(value.size() != 6 && value[2] != '/'){
+        throw invalid_argument("Formato de data errado.");
+    }
+
+    string month = value.substr(3,3);
+    int day = stoi(value.substr(0,2));
+
+    if(months.find(month) == months.end()) {
+        throw invalid_argument("Formato invalido de data!");
+    }
+    if (day > months[month]){
+        throw invalid_argument("Formato invalido de data!");
+    }
+}
+
+void Date::setValue(string value){
+    validate(value);
+    this->value = value;
 
 }
