@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1658236191 source:c:\users\yuiti\documents\python\c++\tp1\main.cpp
+	<iostream>
+	"Command.hpp"
+	"Entities.hpp"
+	"CTest.hpp"
+	"ETest.hpp"
+
+1658233977 source:c:\users\yuiti\documents\python\c++\tp1\ctest.cpp
+	"CTest.hpp"
+	<iostream>
+	<string.h>
+
+1658160078 c:\users\yuiti\documents\python\c++\tp1\ctest.hpp
+	<iostream>
+	<string.h>
+	"Command.hpp"
+
+1658236743 c:\users\yuiti\documents\python\c++\tp1\command.hpp
+	<iostream>
+	<string.h>
+
+1658236800 c:\users\yuiti\documents\python\c++\tp1\entities.hpp
+	<iostream>
+	"Command.hpp"
+	<stdexcept>
+	<string.h>
+
+1658233100 c:\users\yuiti\documents\python\c++\tp1\etest.hpp
+	"Entities.hpp"
+	<iostream>
+	<string.h>
+
+1658236202 source:c:\users\yuiti\documents\python\c++\tp1\etest.cpp
+	"ETest.hpp"
+	<iostream>
+	<string.h>
+
+1658239232 source:c:\users\yuiti\documents\python\c++\tp1\command.cpp
+	<iostream>
+	<map>
+	"Command.hpp"
+
