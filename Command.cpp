@@ -253,12 +253,10 @@ void Code::validate(string value){
  
         int d = value[i] - '0';
  
-        if (isSecond == true)
+        if (isSecond == true){
             d = d * 2;
- 
-        // We add two digits to handle
-        // cases that make two digits after
-        // doubling
+        }
+        
         nSum += d / 10;
         nSum += d % 10;
  
